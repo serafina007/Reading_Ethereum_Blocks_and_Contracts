@@ -65,7 +65,7 @@ def is_ordered_block(w3, block_num):
 			priority_fee = gas_price - base_fee
 		priority_fees.append(priority_fee)
 
-	ordered = all(priority_fees[i] >= priotity_fees[i + 1] for i in range(len(priority_fees)- 1 ))
+	ordered = all(priority_fees[i] >= priority_fees[i + 1] for i in range(len(priority_fees)- 1 ))
 	return ordered
 
 
